@@ -3,7 +3,7 @@
     /// <summary>
     /// https://leetcode.com/problems/roman-to-integer/
     /// </summary>
-    public static class RomanToInteger
+    public static class RomanToIntegerSolution
     {
         private static readonly Dictionary<char, int> _romanianToInteger = new Dictionary<char, int>()
         {
@@ -16,7 +16,7 @@
             { 'M', 1000}
         };
 
-        public static int RomanToInt(string s)
+        public static int RomanToInteger(string s)
         {
             var rawIntegerNumbers = s.Select(x => _romanianToInteger.GetValueOrDefault(x)).ToList();
             rawIntegerNumbers.Reverse();

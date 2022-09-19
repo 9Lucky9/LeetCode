@@ -3,9 +3,9 @@
     /// <summary>
     /// https://leetcode.com/problems/two-sum/
     /// </summary>
-    public static class TwoSum
+    public static class TwoSumSolution
     {
-        public static int[] SumOfTwo(int[] nums, int target)
+        public static int[] TwoSum(int[] nums, int target)
         {
             var result = new int[2];
             for (int i = 0; i < nums.Length; i++)
