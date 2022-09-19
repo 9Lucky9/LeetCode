@@ -1,5 +1,8 @@
 ﻿namespace LeetCode.Easy
 {
+    /// <summary>
+    /// https://leetcode.com/problems/two-sum/
+    /// </summary>
     public static class TwoSum
     {
         public static int[] SumOfTwo(int[] nums, int target)
