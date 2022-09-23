@@ -8,13 +8,12 @@
         public static string LongestCommonPrefix(string[] strs)
         {
             var result = "";
-            var strsList = strs.ToList();
-            var maxPrefix = strsList.MinBy(x => x.Length);
+            var maxPrefix = strs.MinBy(x => x.Length);
             var maxPrefixCount = maxPrefix.Length;
-            strsList.Remove(maxPrefix);
+            strs = strs.Where(x => x != maxPrefix).ToArray();
             for(int i = 0; i < maxPrefixCount; i++)
             {
-                var matchCount = strsList.Select(x => x.StartsWith(maxPrefix));
+                var matchCount = strs.Select(x => x.StartsWith(maxPrefix));
                 if (matchCount.All(x => x is true))
                 {
                     return maxPrefix;
