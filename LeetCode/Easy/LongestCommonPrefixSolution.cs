@@ -5,6 +5,9 @@
     /// </summary>
     public static class LongestCommonPrefixSolution
     {
+        /// <summary>
+        /// Linq solution.
+        /// </summary>
         public static string LongestCommonPrefix(string[] strs)
         {
             var result = "";
