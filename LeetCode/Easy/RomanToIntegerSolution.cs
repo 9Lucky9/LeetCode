@@ -1,9 +1,11 @@
-﻿namespace LeetCode.Easy
+﻿using BenchmarkDotNet.Attributes;
+
+namespace LeetCode.Easy
 {
     /// <summary>
     /// https://leetcode.com/problems/roman-to-integer/
     /// </summary>
-    public static class RomanToIntegerSolution
+    public class RomanToIntegerSolution
     {
         private static readonly Dictionary<char, int> _romanianToInteger = new Dictionary<char, int>()
         {
@@ -16,7 +18,8 @@
             { 'M', 1000}
         };
 
-        public static int RomanToInteger(string s)
+        //TODO: Rework, bad perfomance
+        public int RomanToInteger(string s)
         {
             var rawIntegerNumbers = s.Select(x => _romanianToInteger.GetValueOrDefault(x)).ToList();
             rawIntegerNumbers.Reverse();
@@ -52,6 +55,5 @@
             }
             return result;
         }
-
     }
 }
