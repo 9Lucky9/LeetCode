@@ -34,7 +34,7 @@ namespace LeetCode.Easy
         }
 
         /// <summary>
-        /// (On/2)
+        /// Complexity time - On/2
         /// </summary>
         public bool IsPalindromeImprovedComplexetyTime(int x)
         {
@@ -63,6 +63,10 @@ namespace LeetCode.Easy
             return true;
         }
 
+        /// <summary>
+        /// Use of the Span structure.
+        /// Complexity time - On/2
+        /// </summary>
         public bool IsPalindromeSpan(int x)
         {
             if (x < 0)
