@@ -1,14 +1,17 @@
-﻿namespace LeetCode.Easy
+﻿using BenchmarkDotNet.Attributes;
+
+namespace LeetCode.Easy
 {
     /// <summary>
     /// https://leetcode.com/problems/longest-common-prefix/
     /// </summary>
-    public static class LongestCommonPrefixSolution
+    [MemoryDiagnoser]
+    public class LongestCommonPrefixSolution
     {
         /// <summary>
         /// Linq solution.
         /// </summary>
-        public static string LongestCommonPrefix(string[] strs)
+        public string LongestCommonPrefixLinq(string[] strs)
         {
             var result = "";
             var maxPrefix = strs.MinBy(x => x.Length);
