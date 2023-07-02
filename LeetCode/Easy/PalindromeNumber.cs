@@ -1,12 +1,10 @@
-﻿using BenchmarkDotNet.Attributes;
-using System.Text;
+﻿using System.Text;
 
 namespace LeetCode.Easy
 {
     /// <summary>
     /// https://leetcode.com/problems/palindrome-number/
     /// </summary>
-    [MemoryDiagnoser]
     public class PalindromeNumber
     {
         /// <summary>
@@ -56,6 +54,34 @@ namespace LeetCode.Easy
             else
             {
                 for(int i = 0; i < j/2-1; i++)
+                {
+                    if (stringNumber[i] != stringNumber[j])
+                        return false;
+                    j--;
+                }
+            }
+            return true;
+        }
+
+        public bool IsPalindromeSpan(int x)
+        {
+            if (x < 0)
+                return false;
+            
+            var stringNumber = x.ToString().AsSpan();
+            var j = stringNumber.Length - 1;
+            if (j % 2 == 0)
+            {
+                for (int i = 0; i < j / 2; i++)
+                {
+                    if (stringNumber[i] != stringNumber[j])
+                        return false;
+                    j--;
+                }
+            }
+            else
+            {
+                for (int i = 0; i < j / 2 - 1; i++)
                 {
                     if (stringNumber[i] != stringNumber[j])
                         return false;

@@ -23,9 +23,15 @@ namespace LeetCode.Benchmarks.Easy
         }
 
         [Benchmark]
-        public void IsPalindromeOneWayBenchmark()
+        public void IsPalindromeImprovedComplexetyTime()
         {
             _palindromeNumber.IsPalindromeImprovedComplexetyTime(_number);
+        }
+
+        [Benchmark]
+        public void IsPalindromeSpan()
+        {
+            _palindromeNumber.IsPalindromeSpan(_number);
         }
     }
 }
